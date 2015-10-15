@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>TransactionModule.Package</id>
-    <version>1.0.0.0</version>
+    <version>1.0.1510.0</version>
     <title>TransactionModule</title>
     <authors>Leonov Artem</authors>
     <owners></owners>
@@ -15,13 +15,13 @@
       Модуль для реализации трансферов внутренней валюты
     </summary>
     <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/TransactionModule.Package</projectUrl>
+    <projectUrl>https://github.com/artem-leonov/TransactionModule</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <dependencies>
-        <group targetFramework="net40">
-          <dependency id="log4net" version="1.2.10" />
+        <group targetFramework="net45">
+          <dependency id="Unity" version="3.5.1404.0" />
         </group>
     </dependencies>
     <references></references>
@@ -29,7 +29,5 @@
   </metadata>
   <files>
     <file src="lib\" target="lib" />
-    <file src="tools\" target="tools" />
-    <file src="content\" target="content" />
   </files>
 </package>

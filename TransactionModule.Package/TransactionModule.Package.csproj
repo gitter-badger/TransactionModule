@@ -49,55 +49,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Constants\TransactionParticipantType.cs" />
-    <Compile Include="src\Enums\TransactionState.cs" />
-    <Compile Include="src\Exceptions\TransactionSubjectIsNotValidException.cs" />
-    <Compile Include="src\Exceptions\WithdrawalException.cs" />
-    <Compile Include="src\Extensions\UnityContainerExtensions.cs" />
-    <Compile Include="src\Factories\FactoryMethods\Interfaces\ITransactionFactoryMethod.cs" />
-    <Compile Include="src\Factories\FactoryMethods\Interfaces\ITransactionModuleFactoryMethod.cs" />
-    <Compile Include="src\Interfaces\ITransaction.cs" />
-    <Compile Include="src\Interfaces\ITransactionModule.cs" />
-    <Compile Include="src\Repositories\Interfaces\ITransactionRepository.cs" />
-    <Compile Include="src\Strategies\Interfaces\ICompleteTransactionCallback.cs" />
-    <Compile Include="src\Strategies\Interfaces\IOperateWalletStrategy.cs" />
-    <Compile Include="src\TransactionModule.cs" />
-    <Compile Include="src\TransactionStateAppliers\CancelTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\CompleteTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Context\DefiniteTransactionStateApplierContext.cs" />
-    <Compile Include="src\TransactionStateAppliers\Context\IndefiniteTransactionStateApplierContext.cs" />
-    <Compile Include="src\TransactionStateAppliers\HoldTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\IndefiniteTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\ICancelTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\ICompleteTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\IDefiniteTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\IHoldTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\IIndefiniteTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\IProcessTransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\Interfaces\ITransactionStateApplier.cs" />
-    <Compile Include="src\TransactionStateAppliers\ProcessTransactionStateApplier.cs" />
-    <Compile Include="src\Validators\AnonymousTransactionSubjectValidator.cs" />
-    <Compile Include="src\Validators\AppTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Context\DefiniteTransactionParticipantValidatorContext.cs" />
-    <Compile Include="src\Validators\Context\IndefiniteTransactionParticipantValidatorContext.cs" />
-    <Compile Include="src\Validators\Context\TransactionSubjectValidatorContext.cs" />
-    <Compile Include="src\Validators\IndefiniteTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\IAnonymousTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\IAppTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\IDefiniteTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\IIndefiniteTransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\ITransactionAmountValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\ITransactionParticipantValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\ITransactionSubjectValidator.cs" />
-    <Compile Include="src\Validators\Interfaces\IValidator.cs" />
-    <Compile Include="src\Validators\TransactionAmountValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NuGetPackage.ps1" />
     <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
     <None Include="NuGet.config" />
-    <None Include="Package.nuspec" />
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
@@ -105,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\" />
-    <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -120,6 +79,9 @@
       <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\TransactionModule.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
